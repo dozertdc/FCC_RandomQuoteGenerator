@@ -1,0 +1,24 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: sans-serif;
+}
+
+.container h1 {
+  font-size: 50px;
+}
+
+.nextFortune {
+  margin: 20px;
+}
+
+.quoteBox {
+  padding: 20px;
+  border: 2px solid white;
+}
+
