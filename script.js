@@ -4,13 +4,16 @@ function getFortune(){
         xhr.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                var fortune = xhr.responseText;
-               console.log(fortune);
-               var changed = fortune.replace(/\n/g,'<br/>');
                fortune = JSON.parse(fortune);
                document.getElementById("quote").innerHTML = fortune;
+               return fortune;
             }
         };
         xhr.open("GET", url, true);
         xhr.send();
     }
-    getFortune();
+   getFortune();
+    
+    function tweet(){
+        window.open("https://twitter.com/intent/tweet?text=" + document.getElementById("quote").innerText);
+    }
